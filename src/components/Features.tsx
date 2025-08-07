@@ -9,74 +9,77 @@ import {
   Share2,
   Layers,
   Clock,
-  Sparkles
+  Sparkles,
+  Zap,
+  Brain,
+  Wand2
 } from 'lucide-react';
 
 const Features: React.FC = () => {
   const features = [
     {
-      icon: Video,
-      title: 'Smart Video Generation',
-      description: 'AI analyzes your content and creates professional videos with perfect pacing and transitions.',
-      color: 'indigo'
-    },
-    {
-      icon: Palette,
-      title: 'Custom Branding',
-      description: 'Apply your brand colors, fonts, and style guidelines automatically to every video.',
+      icon: Brain,
+      title: 'AI Script Generation',
+      description: 'Generate compelling video scripts from just a topic or brief description using advanced AI.',
       color: 'purple'
     },
     {
-      icon: Music,
-      title: 'AI Music & Sound',
-      description: 'Automatically select and sync background music that matches your video\'s mood and pace.',
+      icon: Video,
+      title: 'Smart Scene Creation',
+      description: 'AI automatically creates scenes, transitions, and visual compositions for professional results.',
       color: 'pink'
     },
     {
-      icon: Type,
-      title: 'Dynamic Text Effects',
-      description: 'Animated titles, captions, and text overlays that enhance your message.',
+      icon: Palette,
+      title: 'Dynamic Styling',
+      description: 'Apply brand colors, fonts, and visual themes automatically across your entire video.',
       color: 'blue'
+    },
+    {
+      icon: Music,
+      title: 'AI Audio Sync',
+      description: 'Intelligent music selection and audio synchronization that matches your video\'s mood.',
+      color: 'green'
+    },
+    {
+      icon: Type,
+      title: 'Animated Typography',
+      description: 'Beautiful text animations, captions, and titles that enhance your message.',
+      color: 'yellow'
     },
     {
       icon: Layers,
       title: 'Multi-Layer Editing',
-      description: 'Advanced compositing with multiple video layers, effects, and transitions.',
-      color: 'green'
-    },
-    {
-      icon: Clock,
-      title: 'Real-time Preview',
-      description: 'See your changes instantly with our lightning-fast preview engine.',
-      color: 'yellow'
-    },
-    {
-      icon: Download,
-      title: 'Export Anywhere',
-      description: 'Download in any format or resolution, optimized for any platform.',
+      description: 'Advanced compositing with multiple video layers, effects, and professional transitions.',
       color: 'red'
     },
     {
+      icon: Zap,
+      title: 'Real-time Preview',
+      description: 'See your changes instantly with our lightning-fast preview and rendering engine.',
+      color: 'indigo'
+    },
+    {
       icon: Share2,
-      title: 'One-Click Sharing',
-      description: 'Share directly to social media platforms with optimized formats and sizes.',
+      title: 'One-Click Export',
+      description: 'Export and share directly to social platforms with optimized formats and sizes.',
       color: 'teal'
     }
   ];
 
   const colorClasses = {
-    indigo: 'bg-indigo-100 text-indigo-600',
-    purple: 'bg-purple-100 text-purple-600',
-    pink: 'bg-pink-100 text-pink-600',
-    blue: 'bg-blue-100 text-blue-600',
-    green: 'bg-green-100 text-green-600',
-    yellow: 'bg-yellow-100 text-yellow-600',
-    red: 'bg-red-100 text-red-600',
-    teal: 'bg-teal-100 text-teal-600'
+    purple: 'bg-purple-900/30 text-purple-400 border-purple-500/20',
+    pink: 'bg-pink-900/30 text-pink-400 border-pink-500/20',
+    blue: 'bg-blue-900/30 text-blue-400 border-blue-500/20',
+    green: 'bg-green-900/30 text-green-400 border-green-500/20',
+    yellow: 'bg-yellow-900/30 text-yellow-400 border-yellow-500/20',
+    red: 'bg-red-900/30 text-red-400 border-red-500/20',
+    indigo: 'bg-indigo-900/30 text-indigo-400 border-indigo-500/20',
+    teal: 'bg-teal-900/30 text-teal-400 border-teal-500/20'
   };
 
   return (
-    <section id="features" className="py-24 bg-white">
+    <section id="features" className="py-24 bg-black">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -85,19 +88,19 @@ const Features: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center space-x-2 bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          <div className="inline-flex items-center space-x-2 bg-purple-900/30 text-purple-300 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-purple-500/20">
             <Sparkles className="w-4 h-4" />
             <span>Powerful Features</span>
           </div>
           
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Everything You Need to Create
-            <span className="block bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
               Professional Videos
             </span>
           </h2>
           
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-400 max-w-3xl mx-auto">
             Our comprehensive suite of AI-powered tools makes video creation effortless, 
             whether you're a beginner or a professional content creator.
           </p>
@@ -111,17 +114,17 @@ const Features: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group bg-white rounded-2xl p-6 border border-gray-100 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+              className="group bg-gray-900/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-800 hover:border-gray-700 transition-all duration-300 transform hover:-translate-y-2 hover:shadow-2xl"
             >
-              <div className={`w-12 h-12 ${colorClasses[feature.color as keyof typeof colorClasses]} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+              <div className={`w-12 h-12 ${colorClasses[feature.color as keyof typeof colorClasses]} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 border`}>
                 <feature.icon className="w-6 h-6" />
               </div>
               
-              <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors">
+              <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">
                 {feature.title}
               </h3>
               
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-400 leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>
