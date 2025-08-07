@@ -4,7 +4,28 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <meta name="description" content="Create stunning videos in minutes with AI-powered VideoGen. Transform your ideas into professional videos with no editing skills required." />
+    <meta name="keywords" content="video generator, AI video, video creation, video editing, content creation" />
+    <meta property="og:title" content="VideoGen - AI-Powered Video Generation" />
+    <meta property="og:description" content="Transform your ideas into professional videos with our AI-powered platform. No editing skills required." />
+    <meta property="og:type" content="website" />
+    <title>VideoGen - AI-Powered Video Generation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+            animation: {
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'float': 'float 6s ease-in-out infinite',
+            }
+          }
+        }
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>
